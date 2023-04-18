@@ -1,0 +1,25 @@
+.socials {
+  padding: 0;
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 27px;
+
+
+  min-width: 20px;
+  width: fit-content;
+  max-width: 116px;
+}
+
+.social__link {
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include vp-1023 {
+    max-height: 16px;
+  }
+}
