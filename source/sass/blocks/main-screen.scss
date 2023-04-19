@@ -1,0 +1,110 @@
+.main-screen {
+  padding: 271px 0 295px;
+  color: $color-default-white;
+  position: relative;
+
+
+  @include vp-1023 {
+    padding: 269px 0 295px;
+  }
+
+  @include vp-767 {
+    padding: 177px 0 245px;
+  }
+
+  @include vp-374 {
+    padding: 177px 0 178px;
+  }
+}
+
+.main-screen__inner {
+  padding-left: 198px;
+
+  @include vp-1023 {
+    margin: 0;
+  }
+}
+
+.main-screen__hero {
+  max-width: 100%;
+  position: absolute;
+  margin-left: -198px;
+  top: -10px;
+  z-index: -1;
+  height: 650px;
+  overflow: hidden;
+
+  @include vp-1023 {
+    margin-left: -45px;
+  }
+
+  @include vp-767 {
+    height: 510px;
+    margin-left: -15px;
+  }
+
+  img {
+    min-width: 1366px;
+
+    width: 100%;
+    height: 650px;
+
+    @include vp-1023 {
+      height: 648px;
+      object-fit: contain;
+      object-position: left;
+    }
+
+    @include vp-767 {
+      height: 510px;
+      object-fit: none;
+      object-position: 0 center;
+    }
+
+    @include vp-374 {
+      height: 520px;
+    }
+  }
+}
+
+.main-screen__title {
+  margin: 0 0 10px;
+
+  font-family: $ff-montserrat;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 66px;
+
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  @include vp-1023 {
+    margin: 0 0 11px;
+
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  @include vp-767 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+
+.main-screen__description {
+  margin: 0;
+
+  font-family: $ff-montserrat;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+
+  @include vp-1023 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

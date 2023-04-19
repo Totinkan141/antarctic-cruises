@@ -7,33 +7,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Описание проекта">
   <title>Круизы в Антарктику</title>
-  <description>Туристическая компания по поездкам в Антар</description>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header class="header" data-header>
       <div class="container header__inner">
         <a class="header__logo">
-          <img class="logo" src="img/svg/logo.svg" alt="Логотип." width="70" height="38">
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/svg/logo-mobile.svg">
+            <source media="(max-width: 1023px)" srcset="img/svg/logo-tablet.svg">
+            <img class="logo" src="img/svg/logo-desktop.svg" alt="Логотип." width="70" height="38">
+          </picture>
         </a>
 
-        <nav class="main-nav">
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a href="#advantages">Преимущества</a></li>
-            <li class="main-nav__item"><a href="sitemap.html">Направления</a></li>
-            <li class="main-nav__item"><a href="#upcoming-cruises">Ближайшие</a></li>
-            <li class="main-nav__item"><a href="#contact">Контакты</a></li>
+        <nav class="header-nav">
+          <ul class="header-nav__list">
+            <li class="header-nav__item"><a class="header-nav__link" href="#advantages">Преимущества</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="sitemap.html">Направления</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="#upcoming-cruises">Ближайшие круизы</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="#contact">Контакты</a></li>
           </ul>
         </nav>
+        <button class="header__burger" type="button" aria-label="Переключатель отображения меню"
+          aria-pressed="false" data-burger>
+          <span class="visually-hidden">Открыть меню</span>
+          <svg class="header__burger-icon" width="20" height="20" aria-hidden="true">
+            <use xlink:href="#icon-close"></use>
+          </svg>
+        </button>
       </div>
     </header>
+
     <main class="main">
-      <section class="hero">
-        <div class="container hero__inner">
-          <h1 class="hero__title">Круизы в Антарктику </h1>
-          <p class="hero__description">Волшебный мир айсбергов и пингвинов</p>
+      <section class="main-screen">
+        <div class="container main-screen__inner">
+          <picture class="main-screen__hero">
+            <source media="(max-width: 320px)" type="image/webp"
+              srcset="img/main-screen/mobile/hero@1x.webp 1x, img/main-screen/mobile/hero@2x.webp 2x">
+            <source media="(max-width: 320px)"
+              srcset="img/main-screen/mobile/hero@1x.jpg 1x, img/main-screen/mobile/hero@2x.jpg 2x">
+            <source media="(max-width: 768px)" type="image/webp"
+              srcset="img/main-screen/tablet/hero@1x.webp 1x, img/main-screen/tablet/hero@2x.webp 2x">
+            <source media="(max-width: 768px)"
+              srcset="img/main-screen/tablet/hero@1x.jpg 1x, img/main-screen/tablet/hero@2x.jpg 2x">
+            <source media="(min-width: 769px)" type="image/webp"
+              srcset="img/main-screen/desktop/hero@1x.webp 1x, img/main-screen/desktop/hero@2x.webp 2x">
+            <img srcset="img/main-screen/desktop/hero@1x.jpg 1x, img/main-screen/desktop/hero@2x.jpg 2x" loading="eager"
+              alt="Красивые ледяные виды Антарктики." width="1366" height="658">
+          </picture>
+          <h1 class="main-screen__title">Круизы в&nbsp;Антарктику </h1>
+          <p class="main-screen__description">Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
         </div>
       </section>
 
@@ -366,7 +391,7 @@
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link"  href="" aria-label="Ссылка на нас в Дзен.">
+            <a class="socials__link" href="" aria-label="Ссылка на нас в Дзен.">
               <svg width="20" height="20">
                 <use xlink:href="img/sprite.svg#dzen"></use>
               </svg>
