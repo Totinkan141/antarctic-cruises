@@ -36,11 +36,12 @@
   background-color: $light-blue;
 
   @include vp-1023 {
+    height: 638px;
     margin-left: -45px;
   }
 
   @include vp-767 {
-    height: 510px;
+    height: 500px;
     margin-left: -15px;
   }
 
@@ -56,13 +57,9 @@
     }
 
     @include vp-767 {
-      height: 510px;
+      height: 500px;
       object-fit: none;
       object-position: 0 center;
-    }
-
-    @include vp-374 {
-      height: 520px;
     }
   }
 }
