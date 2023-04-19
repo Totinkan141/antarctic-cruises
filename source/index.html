@@ -14,6 +14,9 @@
   <div class="wrapper">
     <header class="header" data-header>
       <div class="container header__inner">
+        <svg class="header__logo--burger" width="32" height="22">
+          <use xlink:href="img/sprite.svg#dark-logo"></use>
+        </svg>
         <a class="header__logo">
           <picture>
             <source media="(max-width: 767px)" srcset="img/svg/logo-mobile.svg">
@@ -30,11 +33,14 @@
             <li class="header-nav__item"><a class="header-nav__link" href="#contact">Контакты</a></li>
           </ul>
         </nav>
+
         <button class="header__burger" type="button" aria-label="Переключатель отображения меню"
-          aria-pressed="false" data-burger>
-          <span class="visually-hidden">Открыть меню</span>
-          <svg class="header__burger-icon" width="20" height="20" aria-hidden="true">
-            <use xlink:href="#icon-close"></use>
+          aria-pressed="true" data-burger>
+          <svg class="header__burger-icon header__burger-icon--open" width="42" height="22">
+            <use xlink:href="img/sprite.svg#burger-menu" ></use>
+          </svg>
+          <svg class="header__burger-icon header__burger-icon--close" width="15" height="15" data-close-burger>
+            <use xlink:href="img/sprite.svg#icon-close"></use>
           </svg>
         </button>
       </div>
