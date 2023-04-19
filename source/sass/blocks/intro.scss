@@ -1,0 +1,14 @@
+.intro {
+  padding: 120px 0 145px;
+}
+
+.intro__inner {
+  display: grid;
+  grid-template-columns: 1fr 560px;
+  gap: 88px;
+}
+
+.intro__image {
+  max-width: 560px;
+  max-height: 301px;
+}
