@@ -29,25 +29,26 @@
   max-width: 100%;
   position: absolute;
   margin-left: -198px;
-  top: -10px;
+  top: 0;
   z-index: -1;
-  height: 650px;
+  height: 655px;
   overflow: hidden;
+  background-color: $light-blue;
 
   @include vp-1023 {
+    height: 638px;
     margin-left: -45px;
   }
 
   @include vp-767 {
-    height: 510px;
+    height: 500px;
     margin-left: -15px;
   }
 
   img {
     min-width: 1366px;
-
-    width: 100%;
-    height: 650px;
+    object-fit: cover;
+    height: 655px;
 
     @include vp-1023 {
       height: 648px;
@@ -56,13 +57,9 @@
     }
 
     @include vp-767 {
-      height: 510px;
+      height: 500px;
       object-fit: none;
       object-position: 0 center;
-    }
-
-    @include vp-374 {
-      height: 520px;
     }
   }
 }
