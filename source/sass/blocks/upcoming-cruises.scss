@@ -1,0 +1,29 @@
+.upcoming-cruises {
+  padding: 89px 0 90px;
+}
+
+.upcoming-cruises__title {
+  margin: 0 0 47px;
+
+  text-align: center;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+}
+
+.upcoming-cruises__list {
+  margin: 0 auto;
+  padding: 0 15px;
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+
+  @include vp-1023 {
+    justify-content: center;
+  }
+}
+

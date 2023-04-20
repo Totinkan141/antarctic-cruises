@@ -647,33 +647,6 @@ button,
   padding: 0 103px;
 }
 
-.btn {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  padding: 10px 20px;
-  color: #f9fbfd;
-  background-color: #2c39f2;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-}
-
-.btn--red {
-  background-color: #ff1553;
-}
-
-.btn:disabled {
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-.btn.focus-visible:focus {
-  opacity: 0.8;
-}
-
 .modal {
   position: fixed;
   top: 0;
@@ -1621,6 +1594,143 @@ button,
   line-height: 20px;
 }
 
+.upcoming-cruises {
+  padding: 89px 0 90px;
+}
+
+.upcoming-cruises__title {
+  margin: 0 0 47px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+}
+
+.upcoming-cruises__list {
+  margin: 0 auto;
+  padding: 0 15px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.cruise {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  z-index: 1;
+  padding: 22px 30px;
+  max-width: 260px;
+  min-width: 260px;
+  height: 386px;
+  color: #f9fbfd;
+  background-color: #011c40;
+}
+
+.cruise.focus-visible:focus {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 29px 25px 33px;
+}
+
+.cruise.focus-visible:focus .cruise__image {
+  display: none;
+}
+
+.cruise.focus-visible:focus .cruise__name {
+  margin: 0 0 13px;
+}
+
+.cruise.focus-visible:focus .cruise__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 30px;
+}
+
+.cruise.focus-visible:focus .cruise__order-link {
+  display: block;
+}
+
+.cruise__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40));
+  background: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%);
+  background: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
+}
+
+.cruise__name {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.cruise__details {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  gap: 10px;
+}
+
+.cruise__detail-name {
+  margin: 0 0 2px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.cruise__detail-description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.cruise__order-link {
+  margin-top: auto;
+  padding: 7px;
+  display: none;
+  width: 100%;
+  min-height: 43px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #011c40;
+  background-color: #f9fbfd;
+}
+
 .socials {
   padding: 0;
   list-style-type: none;
@@ -1856,10 +1966,6 @@ button,
     padding: 90px 0 100px;
   }
 
-  .advantages {
-    padding: 53px 0 65px;
-  }
-
   .advantages__title {
     font-size: 26px;
     line-height: 39px;
@@ -1888,6 +1994,22 @@ button,
     line-height: 25px;
   }
 
+  .upcoming-cruises__list {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .cruise {
+    max-width: 309px;
+    min-width: 309px;
+    padding: 27px 35px;
+  }
+
+  .cruise.focus-visible:focus {
+    padding: 25px 40px 34px;
+  }
+
   .social__link {
     max-height: 16px;
   }
@@ -1907,6 +2029,12 @@ button,
 
   .footer__socials {
     margin: 3px 0 0 auto;
+  }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
+  .cruise:hover:not(.focus-visible) {
+    padding: 25px 40px 34px;
   }
 }
 
@@ -2006,6 +2134,10 @@ button,
     min-width: 290px;
     -o-object-fit: contain;
     object-fit: contain;
+  }
+
+  .advantages {
+    padding: 53px 0 65px;
   }
 
   .advantages__title {
@@ -2127,15 +2259,39 @@ button,
 }
 
 @media (hover: hover) {
-  .btn:hover:not(.focus-visible) {
-    opacity: 0.8;
-  }
-
   .custom-select__item[aria-selected=true]:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.2);
   }
 
   .custom-select__item:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .cruise:hover:not(.focus-visible) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding: 29px 25px 33px;
+  }
+
+  .cruise:hover:not(.focus-visible) .cruise__image {
+    display: none;
+  }
+
+  .cruise:hover:not(.focus-visible) .cruise__name {
+    margin: 0 0 13px;
+  }
+
+  .cruise:hover:not(.focus-visible) .cruise__details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 0 30px;
+  }
+
+  .cruise:hover:not(.focus-visible) .cruise__order-link {
+    display: block;
   }
 }
