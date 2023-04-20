@@ -1,0 +1,108 @@
+.cruise {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  z-index: 1;
+  padding: 22px 30px;
+
+  max-width: 260px;
+  min-width: 260px;
+  height: 386px;
+
+  color: $color-default-white;
+  background-color: $dark-blue;
+
+  @include hover-focus {
+    flex-direction: column;
+    overflow-y: scroll;
+    padding: 29px 25px 33px;
+
+    .cruise__image {
+      display: none;
+    }
+
+    .cruise__name {
+      margin: 0 0 13px;
+    }
+
+    .cruise__details {
+      display: flex;
+      margin: 0 0 30px;
+    }
+
+    .cruise__order-link {
+      display: block;
+    }
+  }
+
+  @include vp-1023 {
+    max-width: 309px;
+    min-width: 309px;
+
+    padding: 27px 35px;
+
+
+    @include hover-focus {
+      padding: 25px 40px 34px;
+    }
+  }
+}
+
+.cruise__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: $dark-blue-to-down;
+}
+
+.cruise__name {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+
+.cruise__details {
+  display: none;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  gap: 10px;
+}
+
+.cruise__detail-name {
+  margin: 0 0 2px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.cruise__detail-description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.cruise__order-link {
+  margin-top: auto;
+  padding: 7px;
+
+  display: none;
+  width: 100%;
+  min-height: 43px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+
+  color: $dark-blue;
+  background-color: $color-default-white;
+}
