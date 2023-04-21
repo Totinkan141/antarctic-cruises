@@ -374,7 +374,7 @@
       </section>
 
       <section class="booking">
-        <div class="container booking__inner">
+        <div class="container booking__inner" data-form-validate data-callback="base">
           <div class="booking__info">
             <h2 class="booking__title">Раннее бронирование</h2>
             <p class="booking__text">Забронируйте тур за&nbsp;3-6&nbsp;месяцев
@@ -382,16 +382,22 @@
           </div>
 
 
-          <form action="https://echo.htmlacademy.ru/." method="post">
+          <form action="https://echo.htmlacademy.ru" method="post">
             <h3>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с вами в&nbsp;ближайшее время</h3>
-            <label class="visually-hidden" for="username">Поле для ввода имени</label>
-            <input type="text" name="username" id="username" placeholder="Имя">
-            <label class="visually-hidden" for="user-phone">Поле для ввода имени</label>
-            <input type="tel" name="user-phone" id="user-phone" placeholder="Телефон">
-            <label class="visually-hidden" for="user-email">Поле для ввода имени</label>
-            <input type="email" name="user-email" id="user-email" placeholder="Email">
+            <div class="custom-input" data-required data-validate-type="text">
+              <label class="visually-hidden" for="username">Поле для ввода имени</label>
+              <input type="text" name="username" id="username" placeholder="Имя">
+            </div>
+            <div class="custom-input" data-required data-validate-type="phone" data-on-input-validate>
+              <label class="visually-hidden" for="user-phone" >Поле для ввода имени</label>
+              <input type="tel" name="user-phone" id="user-phone" placeholder="Телефон">
+            </div>
+            <div class="custom-input" data-required data-validate-type="email">
+              <label class="visually-hidden" for="user-email">Поле для ввода имени</label>
+              <input type="email" name="user-email" id="user-email" placeholder="Email">
+            </div>
             <div class="custom-toggle custom-toggle--checkbox"
-                data-validate-type="checkbox" data-required>
+                data-validate-type="checkbox" data-required data-validate-type="checkbox">
               <label>
                 <input type="checkbox" name="user-agree" checked required>
                 <span class="custom-toggle__icon">
