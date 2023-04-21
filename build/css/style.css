@@ -880,12 +880,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 500px;
+  width: 303px;
   padding: 14px 0 10px 36px;
-}
-
-.custom-toggle:last-of-type {
-  padding: 14px 0 58px 36px;
 }
 
 .custom-toggle input {
@@ -907,32 +903,32 @@ button,
   margin-left: 0;
 }
 
+.custom-toggle--checkbox {
+  padding: 0;
+}
+
+.custom-toggle--checkbox .custom-toggle__label {
+  position: relative;
+  top: 5px;
+}
+
 .custom-toggle--checkbox .custom-toggle__icon {
   position: absolute;
   top: 0;
   left: 0;
-  width: 28px;
-  height: 28px;
-  border: 1.5px solid #2c39f2;
-  -webkit-transition: border 0.3s ease;
-  -o-transition: border 0.3s ease;
-  transition: border 0.3s ease;
-}
-
-.custom-toggle--checkbox .custom-toggle__icon::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  background-color: rgba(44, 57, 242, 0);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -webkit-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
+  width: 18px;
+  height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  background-color: #f9fbfd;
 }
 
 .custom-toggle--radio .custom-toggle__icon {
@@ -963,14 +959,6 @@ button,
   -webkit-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
-}
-
-.custom-toggle input:checked + .custom-toggle__icon {
-  border: 1.5px solid #2c39f2;
-}
-
-.custom-toggle input:checked + .custom-toggle__icon::before {
-  background-color: #2c39f2;
 }
 
 .custom-toggle.is-invalid label span {
@@ -1595,7 +1583,7 @@ button,
 }
 
 .upcoming-cruises {
-  padding: 89px 0 90px;
+  padding: 89px 0 120px;
 }
 
 .upcoming-cruises__title {
@@ -1745,6 +1733,8 @@ button,
   padding: 50px 0;
   background-image: -webkit-image-set(url("../img/booking/booking@2x.webp") 2x, url("../img/booking/booking@1x.webp") 1x, url("../img/booking/booking@2x.jpg") 2x, url("../img/booking/booking@1x.jpg") 1x);
   background-image: image-set(url("../img/booking/booking@2x.webp") 2x, url("../img/booking/booking@1x.webp") 1x, url("../img/booking/booking@2x.jpg") 2x, url("../img/booking/booking@1x.jpg") 1x);
+  background-size: cover;
+  background-position: center center;
 }
 
 .booking__inner {
@@ -1759,18 +1749,16 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .booking__info {
+  padding-top: 165px;
   max-width: 495px;
   min-width: 420px;
 }
 
 .booking__title {
-  margin: 0 0 30px;
+  margin: 0 0 7px;
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
@@ -1778,6 +1766,7 @@ button,
 
 .booking__text {
   margin: 0;
+  max-width: 355px;
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
@@ -1785,12 +1774,13 @@ button,
 
 .booking form {
   max-width: 403px;
-  padding: 50px;
+  padding: 45px 50px 52px;
   color: #f9fbfd;
   background-color: #011c40;
 }
 
 .booking form h3 {
+  margin: 0 0 26px;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
@@ -1799,14 +1789,42 @@ button,
 .booking form input {
   max-width: 303px;
   width: 100%;
-  min-height: 43px;
-  padding: 16px;
+  height: 43px;
+  padding: 17px 15px;
+  margin-bottom: 20px;
+  border: none;
   background-color: #f9fbfd;
   color: #011c40;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   outline: none;
+}
+
+.booking form input:nth-last-of-type() {
+  margin: 0 0 25px;
+}
+
+.booking form label {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  padding-left: 23px;
+  margin: 0 0 35px;
+}
+
+.booking form button[type=submit] {
+  padding: 10px;
+  width: 100%;
+  min-height: 40px;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #011c40;
+  background-color: #f9fbfd;
 }
 
 .socials {
@@ -2304,10 +2322,6 @@ button,
   .custom-toggle {
     padding: 14px 0 10px 0;
     width: 100%;
-  }
-
-  .custom-toggle:last-of-type {
-    padding: 14px 0 58px 0;
   }
 
   .custom-select {

@@ -7,6 +7,9 @@
     url("../img/booking/booking@2x.jpg") 2x,
     url("../img/booking/booking@1x.jpg") 1x,
   );
+
+  background-size: cover;
+  background-position: center center;
 }
 
 .booking__inner {
@@ -15,16 +18,16 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
 }
 
 .booking__info {
+  padding-top: 165px;
   max-width: 495px;
   min-width: 420px;
 }
 
 .booking__title {
-  margin: 0 0 30px;
+  margin: 0 0 7px;
 
   font-weight: 700;
   font-size: 40px;
@@ -33,6 +36,7 @@
 
 .booking__text {
   margin: 0;
+  max-width: 355px;
 
   font-weight: 400;
   font-size: 18px;
@@ -41,11 +45,12 @@
 
 .booking form {
   max-width: 403px;
-  padding: 50px;
+  padding: 45px 50px 52px;
   color: $color-default-white;
   background-color: $dark-blue;
 
   h3 {
+    margin: 0 0 26px;
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
@@ -54,8 +59,11 @@
   input {
     max-width: 303px;
     width: 100%;
-    min-height: 43px;
-    padding: 16px;
+    height: 43px;
+    padding: 17px 15px;
+    margin-bottom: 20px;
+
+    border: none;
 
     background-color: $color-default-white;
     color: $dark-blue;
@@ -63,5 +71,33 @@
     font-size: 14px;
     line-height: 21px;
     outline: none;
+
+    &:nth-last-of-type() {
+      margin: 0 0 25px;
+    }
+  }
+
+  label {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13px;
+
+    padding-left: 23px;
+    margin: 0 0 35px;
+  }
+
+  button[type="submit"] {
+    padding: 10px;
+    width: 100%;
+    min-height: 40px;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+
+    color: $dark-blue;
+    background-color: $color-default-white;
   }
 }
