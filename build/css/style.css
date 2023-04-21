@@ -1643,31 +1643,36 @@ button,
   background-color: #011c40;
 }
 
-.cruise.focus-visible:focus {
+.cruise:hover,
+.cruise:focus {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  overflow-y: scroll;
-  padding: 29px 25px 33px;
+  padding: 29px 25px 35px;
 }
 
-.cruise.focus-visible:focus .cruise__image {
+.cruise:hover .cruise__image,
+.cruise:focus .cruise__image {
   display: none;
 }
 
-.cruise.focus-visible:focus .cruise__name {
+.cruise:hover .cruise__name,
+.cruise:focus .cruise__name {
   margin: 0 0 13px;
 }
 
-.cruise.focus-visible:focus .cruise__details {
+.cruise:hover .cruise__details,
+.cruise:focus .cruise__details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0 0 30px;
+  overflow-y: scroll;
 }
 
-.cruise.focus-visible:focus .cruise__order-link {
+.cruise:hover .cruise__order-link,
+.cruise:focus .cruise__order-link {
   display: block;
 }
 
@@ -1681,6 +1686,10 @@ button,
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40));
   background: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%);
   background: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
+}
+
+.cruise__image img {
+  height: 100%;
 }
 
 .cruise__name {
@@ -1714,14 +1723,15 @@ button,
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  color: #d8d8d9;
 }
 
 .cruise__order-link {
   margin-top: auto;
-  padding: 7px;
+  padding: 10px;
   display: none;
   width: 100%;
-  min-height: 43px;
+  min-height: 40px;
   cursor: pointer;
   font-weight: 600;
   font-size: 14px;
@@ -1729,6 +1739,74 @@ button,
   text-align: center;
   color: #011c40;
   background-color: #f9fbfd;
+}
+
+.booking {
+  padding: 50px 0;
+  background-image: -webkit-image-set(url("../img/booking/booking@2x.webp") 2x, url("../img/booking/booking@1x.webp") 1x, url("../img/booking/booking@2x.jpg") 2x, url("../img/booking/booking@1x.jpg") 1x);
+  background-image: image-set(url("../img/booking/booking@2x.webp") 2x, url("../img/booking/booking@1x.webp") 1x, url("../img/booking/booking@2x.jpg") 2x, url("../img/booking/booking@1x.jpg") 1x);
+}
+
+.booking__inner {
+  padding: 0 163px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.booking__info {
+  max-width: 495px;
+  min-width: 420px;
+}
+
+.booking__title {
+  margin: 0 0 30px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+.booking__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.booking form {
+  max-width: 403px;
+  padding: 50px;
+  color: #f9fbfd;
+  background-color: #011c40;
+}
+
+.booking form h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.booking form input {
+  max-width: 303px;
+  width: 100%;
+  min-height: 43px;
+  padding: 16px;
+  background-color: #f9fbfd;
+  color: #011c40;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  outline: none;
 }
 
 .socials {
@@ -1995,9 +2073,12 @@ button,
   }
 
   .upcoming-cruises__list {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0;
   }
 
   .cruise {
@@ -2006,8 +2087,9 @@ button,
     padding: 27px 35px;
   }
 
-  .cruise.focus-visible:focus {
-    padding: 25px 40px 34px;
+  .cruise:hover,
+  .cruise:focus {
+    padding: 30px 35px 40px;
   }
 
   .social__link {
@@ -2029,12 +2111,6 @@ button,
 
   .footer__socials {
     margin: 3px 0 0 auto;
-  }
-}
-
-@media (max-width: 1023px) and (hover: hover) {
-  .cruise:hover:not(.focus-visible) {
-    padding: 25px 40px 34px;
   }
 }
 
@@ -2265,33 +2341,5 @@ button,
 
   .custom-select__item:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.4);
-  }
-
-  .cruise:hover:not(.focus-visible) {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    overflow-y: scroll;
-    padding: 29px 25px 33px;
-  }
-
-  .cruise:hover:not(.focus-visible) .cruise__image {
-    display: none;
-  }
-
-  .cruise:hover:not(.focus-visible) .cruise__name {
-    margin: 0 0 13px;
-  }
-
-  .cruise:hover:not(.focus-visible) .cruise__details {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0 0 30px;
-  }
-
-  .cruise:hover:not(.focus-visible) .cruise__order-link {
-    display: block;
   }
 }

@@ -23,7 +23,8 @@
   gap: 30px;
 
   @include vp-1023 {
-    justify-content: center;
+    justify-content: space-between;
+    column-gap: 0;
   }
 }
 
