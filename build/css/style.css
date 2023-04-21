@@ -880,12 +880,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 500px;
+  width: 303px;
   padding: 14px 0 10px 36px;
-}
-
-.custom-toggle:last-of-type {
-  padding: 14px 0 58px 36px;
 }
 
 .custom-toggle input {
@@ -907,32 +903,32 @@ button,
   margin-left: 0;
 }
 
+.custom-toggle--checkbox {
+  padding: 0;
+}
+
+.custom-toggle--checkbox .custom-toggle__label {
+  position: relative;
+  top: 5px;
+}
+
 .custom-toggle--checkbox .custom-toggle__icon {
   position: absolute;
   top: 0;
   left: 0;
-  width: 28px;
-  height: 28px;
-  border: 1.5px solid #2c39f2;
-  -webkit-transition: border 0.3s ease;
-  -o-transition: border 0.3s ease;
-  transition: border 0.3s ease;
-}
-
-.custom-toggle--checkbox .custom-toggle__icon::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  background-color: rgba(44, 57, 242, 0);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -webkit-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
+  width: 18px;
+  height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  background-color: #f9fbfd;
 }
 
 .custom-toggle--radio .custom-toggle__icon {
@@ -963,14 +959,6 @@ button,
   -webkit-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
-}
-
-.custom-toggle input:checked + .custom-toggle__icon {
-  border: 1.5px solid #2c39f2;
-}
-
-.custom-toggle input:checked + .custom-toggle__icon::before {
-  background-color: #2c39f2;
 }
 
 .custom-toggle.is-invalid label span {
@@ -1595,7 +1583,7 @@ button,
 }
 
 .upcoming-cruises {
-  padding: 89px 0 90px;
+  padding: 89px 0 120px;
 }
 
 .upcoming-cruises__title {
@@ -1643,31 +1631,36 @@ button,
   background-color: #011c40;
 }
 
-.cruise.focus-visible:focus {
+.cruise:hover,
+.cruise:focus {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  overflow-y: scroll;
-  padding: 29px 25px 33px;
+  padding: 29px 25px 35px;
 }
 
-.cruise.focus-visible:focus .cruise__image {
+.cruise:hover .cruise__image,
+.cruise:focus .cruise__image {
   display: none;
 }
 
-.cruise.focus-visible:focus .cruise__name {
+.cruise:hover .cruise__name,
+.cruise:focus .cruise__name {
   margin: 0 0 13px;
 }
 
-.cruise.focus-visible:focus .cruise__details {
+.cruise:hover .cruise__details,
+.cruise:focus .cruise__details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0 0 30px;
+  overflow-y: scroll;
 }
 
-.cruise.focus-visible:focus .cruise__order-link {
+.cruise:hover .cruise__order-link,
+.cruise:focus .cruise__order-link {
   display: block;
 }
 
@@ -1681,6 +1674,10 @@ button,
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40));
   background: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%);
   background: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
+}
+
+.cruise__image img {
+  height: 100%;
 }
 
 .cruise__name {
@@ -1714,15 +1711,116 @@ button,
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  color: #d8d8d9;
 }
 
 .cruise__order-link {
   margin-top: auto;
-  padding: 7px;
+  padding: 10px;
   display: none;
   width: 100%;
-  min-height: 43px;
+  min-height: 40px;
   cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #011c40;
+  background-color: #f9fbfd;
+}
+
+.booking {
+  padding: 50px 0;
+  background-image: -webkit-image-set(url("../img/booking/desktop/booking@2x.webp") 2x, url("../img/booking/desktop/booking@1x.webp") 1x, url("../img/booking/desktop/booking@2x.jpg") 2x, url("../img/booking/desktop/booking@1x.jpg") 1x);
+  background-image: image-set(url("../img/booking/desktop/booking@2x.webp") 2x, url("../img/booking/desktop/booking@1x.webp") 1x, url("../img/booking/desktop/booking@2x.jpg") 2x, url("../img/booking/desktop/booking@1x.jpg") 1x);
+  background-size: cover;
+  background-position: center center;
+}
+
+.booking__inner {
+  padding: 0 163px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.booking__info {
+  padding: 165px 0 0;
+  max-width: 495px;
+  min-width: 420px;
+}
+
+.booking__title {
+  margin: 0 0 7px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+.booking__text {
+  margin: 0;
+  max-width: 355px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.booking form {
+  max-width: 403px;
+  min-width: 290px;
+  padding: 45px 50px 52px;
+  color: #f9fbfd;
+  background-color: #011c40;
+}
+
+.booking form h3 {
+  margin: 0 0 26px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.booking form input {
+  max-width: 303px;
+  min-width: 230px;
+  width: 100%;
+  height: 43px;
+  padding: 17px 15px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: #f9fbfd;
+  color: #011c40;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  outline: none;
+}
+
+.booking form input:nth-last-of-type() {
+  margin: 0 0 25px;
+}
+
+.booking form label {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  padding-left: 23px;
+  margin: 0 0 35px;
+}
+
+.booking form button[type=submit] {
+  padding: 10px;
+  width: 100%;
+  min-height: 40px;
+  cursor: pointer;
+  border: none;
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
@@ -1994,10 +2092,17 @@ button,
     line-height: 25px;
   }
 
+  .upcoming-cruises {
+    padding: 89px 0 100px;
+  }
+
   .upcoming-cruises__list {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0;
   }
 
   .cruise {
@@ -2006,8 +2111,41 @@ button,
     padding: 27px 35px;
   }
 
-  .cruise.focus-visible:focus {
-    padding: 25px 40px 34px;
+  .cruise:hover,
+  .cruise:focus {
+    padding: 30px 35px 40px;
+  }
+
+  .booking {
+    padding: 90px 0 100px;
+    background-image: -webkit-image-set(url("../img/booking/tablet/booking@2x.webp") 2x, url("../img/booking/tablet/booking@1x.webp") 1x, url("../img/booking/tablet/booking@2x.jpg") 2x, url("../img/booking/tablet/booking@1x.jpg") 1x);
+    background-image: image-set(url("../img/booking/tablet/booking@2x.webp") 2x, url("../img/booking/tablet/booking@1x.webp") 1x, url("../img/booking/tablet/booking@2x.jpg") 2x, url("../img/booking/tablet/booking@1x.jpg") 1x);
+  }
+
+  .booking__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .booking__info {
+    padding: 0 0 50px;
+  }
+
+  .booking__title {
+    margin: 0 0 5px;
+    font-size: 34px;
+    line-height: 51px;
+    text-align: center;
+  }
+
+  .booking__text {
+    max-width: 420px;
+    text-align: center;
   }
 
   .social__link {
@@ -2032,12 +2170,6 @@ button,
   }
 }
 
-@media (max-width: 1023px) and (hover: hover) {
-  .cruise:hover:not(.focus-visible) {
-    padding: 25px 40px 34px;
-  }
-}
-
 @media (max-width: 767px) {
   .container {
     padding: 0 15px;
@@ -2054,6 +2186,15 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .custom-toggle--checkbox .custom-toggle__label {
+    top: 0;
+  }
+
+  .custom-toggle--checkbox .custom-toggle__icon {
+    width: 20px;
+    height: 20px;
   }
 
   .header {
@@ -2165,6 +2306,46 @@ button,
     max-width: 170px;
   }
 
+  .booking {
+    padding: 44px 0 50px;
+  }
+
+  .booking__inner {
+    padding: 15px;
+  }
+
+  .booking__info {
+    padding: 0 0 35px;
+    min-width: 290px;
+  }
+
+  .booking__title {
+    margin: 0 0 14px;
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  .booking__text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .booking form {
+    padding: 35px 30px 42px;
+  }
+
+  .booking form h3 {
+    text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .booking form label {
+    max-width: 192px;
+    padding-left: 28px;
+    margin: 0 0 15px;
+  }
+
   .footer__inner {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -2226,12 +2407,8 @@ button,
   }
 
   .custom-toggle {
-    padding: 14px 0 10px 0;
+    padding: 0 0 10px 0;
     width: 100%;
-  }
-
-  .custom-toggle:last-of-type {
-    padding: 14px 0 58px 0;
   }
 
   .custom-select {
@@ -2256,6 +2433,11 @@ button,
   .main-screen {
     padding: 177px 0 178px;
   }
+
+  .booking {
+    background-image: -webkit-image-set(url("../img/booking/mobile/booking@2x.webp") 2x, url("../img/booking/mobile/booking@1x.webp") 1x, url("../img/booking/mobile/booking@2x.jpg") 2x, url("../img/booking/mobile/booking@1x.jpg") 1x);
+    background-image: image-set(url("../img/booking/mobile/booking@2x.webp") 2x, url("../img/booking/mobile/booking@1x.webp") 1x, url("../img/booking/mobile/booking@2x.jpg") 2x, url("../img/booking/mobile/booking@1x.jpg") 1x);
+  }
 }
 
 @media (hover: hover) {
@@ -2265,33 +2447,5 @@ button,
 
   .custom-select__item:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.4);
-  }
-
-  .cruise:hover:not(.focus-visible) {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    overflow-y: scroll;
-    padding: 29px 25px 33px;
-  }
-
-  .cruise:hover:not(.focus-visible) .cruise__image {
-    display: none;
-  }
-
-  .cruise:hover:not(.focus-visible) .cruise__name {
-    margin: 0 0 13px;
-  }
-
-  .cruise:hover:not(.focus-visible) .cruise__details {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0 0 30px;
-  }
-
-  .cruise:hover:not(.focus-visible) .cruise__order-link {
-    display: block;
   }
 }

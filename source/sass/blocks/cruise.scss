@@ -12,10 +12,10 @@
   color: $color-default-white;
   background-color: $dark-blue;
 
-  @include hover-focus {
+  &:hover,
+  &:focus {
     flex-direction: column;
-    overflow-y: scroll;
-    padding: 29px 25px 33px;
+    padding: 29px 25px 35px;
 
     .cruise__image {
       display: none;
@@ -28,6 +28,7 @@
     .cruise__details {
       display: flex;
       margin: 0 0 30px;
+      overflow-y: scroll;
     }
 
     .cruise__order-link {
@@ -42,8 +43,9 @@
     padding: 27px 35px;
 
 
-    @include hover-focus {
-      padding: 25px 40px 34px;
+    &:hover,
+    &:focus {
+      padding: 30px 35px 40px;
     }
   }
 }
@@ -56,6 +58,10 @@
   bottom: 0;
   z-index: -1;
   background: $dark-blue-to-down;
+
+  img {
+    height: 100%;
+  }
 }
 
 .cruise__name {
@@ -88,15 +94,17 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+
+  color: $color-gray;
 }
 
 .cruise__order-link {
   margin-top: auto;
-  padding: 7px;
+  padding: 10px;
 
   display: none;
   width: 100%;
-  min-height: 43px;
+  min-height: 40px;
   cursor: pointer;
   font-weight: 600;
   font-size: 14px;

@@ -1,5 +1,9 @@
 .upcoming-cruises {
-  padding: 89px 0 90px;
+  padding: 89px 0 120px;
+
+  @include vp-1023 {
+    padding: 89px 0 100px;
+  }
 }
 
 .upcoming-cruises__title {
@@ -23,7 +27,8 @@
   gap: 30px;
 
   @include vp-1023 {
-    justify-content: center;
+    justify-content: space-between;
+    column-gap: 0;
   }
 }
 
