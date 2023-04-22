@@ -1,6 +1,5 @@
 .custom-input,
 .custom-textarea {
-
   label {
     display: flex;
     align-items: center;
@@ -14,7 +13,6 @@
     &:focus {
       outline: 2px solid rgba($dark-blue, 0.8);
     }
-
   }
 
   &__label {

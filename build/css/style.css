@@ -431,6 +431,7 @@ body {
   min-width: 320px;
   scroll-behavior: smooth;
   font-family: "Montserrat", "Arial", sans-serif;
+  overflow-x: hidden;
 }
 
 html {
@@ -645,6 +646,37 @@ button,
   min-width: 320px;
   margin: 0 auto;
   padding: 0 103px;
+}
+
+.btn {
+  padding: 10px;
+  width: 100%;
+  min-height: 40px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #011c40;
+  background-color: #f9fbfd;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.btn.focus-visible:focus {
+  opacity: 0.8;
+  background-color: #e3ecf6;
 }
 
 .modal {
@@ -1692,17 +1724,7 @@ button,
 
 .cruise__order-link {
   margin-top: auto;
-  padding: 10px;
   display: none;
-  width: 100%;
-  min-height: 40px;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 21px;
-  text-align: center;
-  color: #011c40;
-  background-color: #f9fbfd;
 }
 
 .booking {
@@ -1791,18 +1813,68 @@ button,
   margin: 0 0 35px;
 }
 
-.booking form button[type=submit] {
-  padding: 10px;
-  width: 100%;
-  min-height: 40px;
-  cursor: pointer;
-  border: none;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 21px;
-  text-align: center;
-  color: #011c40;
-  background-color: #f9fbfd;
+.contacts {
+  padding: 120px 0;
+}
+
+.contacts__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.contacts__content {
+  max-width: 500px;
+  height: auto;
+  padding-top: 75px;
+}
+
+.contacts__text {
+  margin: 0 0 30px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.contacts__address {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+  top: 0;
+  margin-bottom: 20px;
+}
+
+.contacts__address svg {
+  position: relative;
+  top: 2px;
+  margin-right: 6px;
+}
+
+.contacts__phone svg {
+  position: relative;
+  top: 2px;
+  margin-right: 6px;
+}
+
+.map {
+  min-width: 560px;
+  height: 306px;
+  background-image: -webkit-image-set(url("../img/map/map@2x.webp") 2x, url("../img/map/map@1x.webp") 1x, url("../img/map/map@2x.jpg") 2x, url("../img/map/map@1x.jpg") 1x);
+  background-image: image-set(url("../img/map/map@2x.webp") 2x, url("../img/map/map@1x.webp") 1x, url("../img/map/map@2x.jpg") 2x, url("../img/map/map@1x.jpg") 1x);
+  background-color: #011c40;
 }
 
 .socials {
@@ -2392,6 +2464,11 @@ button,
 }
 
 @media (hover: hover) {
+  .btn:hover:not(.focus-visible) {
+    opacity: 0.8;
+    background-color: #e3ecf6;
+  }
+
   .custom-select__item[aria-selected=true]:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.2);
   }

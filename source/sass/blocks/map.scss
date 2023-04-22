@@ -1,0 +1,12 @@
+.map {
+  min-width: 560px;
+  height: 306px;
+
+  background-image: image-set(
+    url("../img/map/map@2x.webp") 2x,
+    url("../img/map/map@1x.webp") 1x,
+    url("../img/map/map@2x.jpg") 2x,
+    url("../img/map/map@1x.jpg") 1x,
+  );
+  background-color: $dark-blue;
+}

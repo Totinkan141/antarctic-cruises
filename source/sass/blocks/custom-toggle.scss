@@ -71,21 +71,6 @@
         width: 20px;
         height: 20px;
       }
-      // &::before {
-      //   content: "";
-      //   position: absolute;
-      //   top: 50%;
-      //   left: 50%;
-
-      //   width: 20px;
-      //   height: 20px;
-
-      //   background-color: rgba(#2c39f2, 0);
-
-      //   transform: translate(-50%, -50%);
-
-      //   transition: background-color 0.3s ease;
-      // }
     }
   }
 
@@ -125,10 +110,6 @@
   input:checked + .custom-toggle__icon {
     svg {
       opacity: 1;
-    }
-
-    &::before {
-      // background-color: #2c39f2;
     }
   }
 

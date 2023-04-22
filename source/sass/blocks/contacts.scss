@@ -1,0 +1,50 @@
+.contacts {
+  padding: 120px 0;
+}
+
+.contacts__inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.contacts__content {
+  max-width: 500px;
+  height: auto;
+  padding-top: 75px;
+}
+
+.contacts__text {
+  margin: 0 0 30px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+
+.contacts__address {
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+  top: 0;
+  margin-bottom: 20px;
+
+
+  svg {
+    position: relative;
+    top: 2px;
+    margin-right: 6px;
+  }
+}
+
+.contacts__phone {
+  svg {
+    position: relative;
+    top: 2px;
+    margin-right: 6px;
+  }
+}
