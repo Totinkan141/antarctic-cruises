@@ -1,52 +1,17 @@
 .custom-input,
 .custom-textarea {
-  position: relative;
-
-  display: flex;
-  width: 530px;
-  padding: 14px 0 28px;
-
-  @media screen and (max-width: 767px) {
-    padding: 4px 0 48px;
-    width: 100%;
-  }
-
   label {
     display: flex;
     align-items: center;
     width: 100%;
 
-    @media screen and (max-width: 767px) {
-      align-items: flex-start;
-      flex-direction: column;
+
+    &:hover {
+      outline: 2px solid rgba($dark-blue, 0.5);
     }
 
-    input,
-    textarea {
-      flex-grow: 1;
-      max-width: 300px;
-      min-height: 48px;
-      margin-left: auto;
-      padding: 10px;
-
-      border: 2px solid rgba(#000000, 0.2);
-      border-radius: 5px;
-      outline: none;
-
-      transition: border 0.3s ease;
-
-      @media screen and (max-width: 767px) {
-        max-width: unset;
-        width: 100%;
-      }
-
-      &:hover {
-        border: 2px solid rgba(#000000, 0.5);
-      }
-
-      &:focus {
-        border: 2px solid rgba(#000000, 0.8);
-      }
+    &:focus {
+      outline: 2px solid rgba($dark-blue, 0.8);
     }
   }
 

@@ -11,6 +11,10 @@
   min-width: 20px;
   width: fit-content;
   max-width: 116px;
+
+  @include vp-1023 {
+    gap: 18px;
+  }
 }
 
 .social__link {

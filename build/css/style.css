@@ -431,6 +431,7 @@ body {
   min-width: 320px;
   scroll-behavior: smooth;
   font-family: "Montserrat", "Arial", sans-serif;
+  overflow-x: hidden;
 }
 
 html {
@@ -647,6 +648,37 @@ button,
   padding: 0 103px;
 }
 
+.btn {
+  padding: 10px;
+  width: 100%;
+  min-height: 40px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #011c40;
+  background-color: #f9fbfd;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.btn.focus-visible:focus {
+  opacity: 0.8;
+  background-color: #e3ecf6;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -759,16 +791,6 @@ button,
   pointer-events: auto;
 }
 
-.custom-input,
-.custom-textarea {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 530px;
-  padding: 14px 0 28px;
-}
-
 .custom-input label,
 .custom-textarea label {
   display: -webkit-box;
@@ -780,37 +802,14 @@ button,
   width: 100%;
 }
 
-.custom-input label input,
-.custom-input label textarea,
-.custom-textarea label input,
-.custom-textarea label textarea {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  max-width: 300px;
-  min-height: 48px;
-  margin-left: auto;
-  padding: 10px;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  outline: none;
-  -webkit-transition: border 0.3s ease;
-  -o-transition: border 0.3s ease;
-  transition: border 0.3s ease;
+.custom-input label:hover,
+.custom-textarea label:hover {
+  outline: 2px solid rgba(1, 28, 64, 0.5);
 }
 
-.custom-input label input:hover,
-.custom-input label textarea:hover,
-.custom-textarea label input:hover,
-.custom-textarea label textarea:hover {
-  border: 2px solid rgba(0, 0, 0, 0.5);
-}
-
-.custom-input label input:focus,
-.custom-input label textarea:focus,
-.custom-textarea label input:focus,
-.custom-textarea label textarea:focus {
-  border: 2px solid rgba(0, 0, 0, 0.8);
+.custom-input label:focus,
+.custom-textarea label:focus {
+  outline: 2px solid rgba(1, 28, 64, 0.8);
 }
 
 .custom-input__error,
@@ -905,6 +904,7 @@ button,
 
 .custom-toggle--checkbox {
   padding: 0;
+  width: 100%;
 }
 
 .custom-toggle--checkbox .custom-toggle__label {
@@ -929,6 +929,10 @@ button,
   align-items: center;
   border: none;
   background-color: #f9fbfd;
+}
+
+.custom-toggle--checkbox .custom-toggle__icon svg {
+  opacity: 0;
 }
 
 .custom-toggle--radio .custom-toggle__icon {
@@ -959,6 +963,10 @@ button,
   -webkit-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
+}
+
+.custom-toggle input:checked + .custom-toggle__icon svg {
+  opacity: 1;
 }
 
 .custom-toggle.is-invalid label span {
@@ -1716,17 +1724,7 @@ button,
 
 .cruise__order-link {
   margin-top: auto;
-  padding: 10px;
   display: none;
-  width: 100%;
-  min-height: 40px;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 21px;
-  text-align: center;
-  color: #011c40;
-  background-color: #f9fbfd;
 }
 
 .booking {
@@ -1789,7 +1787,7 @@ button,
 
 .booking form input {
   max-width: 303px;
-  min-width: 230px;
+  min-width: 190px;
   width: 100%;
   height: 43px;
   padding: 17px 15px;
@@ -1816,17 +1814,73 @@ button,
 }
 
 .booking form button[type=submit] {
-  padding: 10px;
-  width: 100%;
   min-height: 40px;
-  cursor: pointer;
-  border: none;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 21px;
-  text-align: center;
-  color: #011c40;
-  background-color: #f9fbfd;
+}
+
+.contacts {
+  padding: 120px 0;
+}
+
+.contacts__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.contacts__content {
+  max-width: 500px;
+  height: auto;
+  padding-top: 75px;
+}
+
+.contacts__text {
+  margin: 0 0 32px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.contacts__address {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+  top: 0;
+  padding-left: 28px;
+  margin-bottom: 20px;
+}
+
+.contacts__address svg {
+  position: absolute;
+  top: 2px;
+  left: 1px;
+}
+
+.contacts__phone svg {
+  position: relative;
+  top: 2px;
+  margin-right: 6px;
+}
+
+.map {
+  min-width: 560px;
+  height: 306px;
+  background-image: -webkit-image-set(url("../img/map/map@2x.webp") 2x, url("../img/map/map@1x.webp") 1x, url("../img/map/map@2x.jpg") 2x, url("../img/map/map@1x.jpg") 1x);
+  background-image: image-set(url("../img/map/map@2x.webp") 2x, url("../img/map/map@1x.webp") 1x, url("../img/map/map@2x.jpg") 2x, url("../img/map/map@1x.jpg") 1x);
+  background-size: cover;
+  background-color: #011c40;
 }
 
 .socials {
@@ -1959,6 +2013,10 @@ button,
     max-width: 560px;
     width: 100%;
     min-width: 324px;
+  }
+
+  .map {
+    min-width: 450px;
   }
 }
 
@@ -2146,6 +2204,39 @@ button,
   .booking__text {
     max-width: 420px;
     text-align: center;
+  }
+
+  .booking form button[type=submit] {
+    min-height: 43px;
+  }
+
+  .contacts {
+    padding: 100px 0 98px;
+  }
+
+  .contacts__inner {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(324px, 1fr))[2];
+    grid-template-columns: repeat(2, minmax(324px, 1fr));
+  }
+
+  .contacts__content {
+    width: 100%;
+    padding-top: 65px;
+  }
+
+  .contacts__text {
+    margin: 0 0 29px;
+  }
+
+  .map {
+    height: 335px;
+    min-width: 324px;
+  }
+
+  .socials {
+    gap: 18px;
   }
 
   .social__link {
@@ -2346,6 +2437,35 @@ button,
     margin: 0 0 15px;
   }
 
+  .contacts {
+    padding: 56px 0 66px;
+  }
+
+  .contacts__inner {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(290px, 1fr))[1];
+    grid-template-columns: repeat(1, minmax(290px, 1fr));
+    row-gap: 35px;
+  }
+
+  .contacts__content {
+    padding: 0;
+  }
+
+  .contacts__text {
+    margin: 0 0 27px;
+  }
+
+  .map {
+    height: 316px;
+    min-width: 290px;
+    width: 100%;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+
   .footer__inner {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -2371,31 +2491,6 @@ button,
 }
 
 @media screen and (max-width: 767px) {
-  .custom-input,
-  .custom-textarea {
-    padding: 4px 0 48px;
-    width: 100%;
-  }
-
-  .custom-input label,
-  .custom-textarea label {
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
-  .custom-input label input,
-  .custom-input label textarea,
-  .custom-textarea label input,
-  .custom-textarea label textarea {
-    max-width: unset;
-    width: 100%;
-  }
-
   .custom-input__label,
   .custom-textarea__label {
     margin: 0 0 18px 0;
@@ -2441,6 +2536,11 @@ button,
 }
 
 @media (hover: hover) {
+  .btn:hover:not(.focus-visible) {
+    opacity: 0.8;
+    background-color: #e3ecf6;
+  }
+
   .custom-select__item[aria-selected=true]:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.2);
   }
