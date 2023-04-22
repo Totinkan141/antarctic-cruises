@@ -1314,7 +1314,7 @@ button,
   color: #f9fbfd;
 }
 
-.header__logo--burger {
+.header__logo-burger {
   display: none;
   position: absolute;
   content: "";
@@ -1403,7 +1403,7 @@ button,
   opacity: 0;
 }
 
-.header.is-open .header__logo--burger {
+.header.is-open .header__logo-burger {
   display: block;
   z-index: 20;
 }
@@ -1721,6 +1721,7 @@ button,
 
 .cruise__image img {
   height: 100%;
+  width: 100%;
 }
 
 .cruise__name {
