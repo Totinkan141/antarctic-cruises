@@ -1667,11 +1667,8 @@ button,
 
 .cruise.focus-visible:focus .cruise__order-link {
   display: block;
-}
-
-.cruise.focus-visible:focus > * {
-  min-width: 239px;
-  max-width: 239px;
+  min-width: none;
+  left: 0;
 }
 
 .cruise__image {
@@ -2466,7 +2463,6 @@ button,
   }
 
   .cruise.focus-visible:focus .cruise__order-link {
-    left: 0;
     min-width: 220px;
     max-width: 220px;
   }
@@ -2620,7 +2616,6 @@ button,
   }
 
   .cruise:hover:not(.focus-visible) .cruise__order-link {
-    left: 0;
     min-width: 220px;
     max-width: 220px;
   }
@@ -2675,10 +2670,7 @@ button,
 
   .cruise:hover:not(.focus-visible) .cruise__order-link {
     display: block;
-  }
-
-  .cruise:hover:not(.focus-visible) > * {
-    min-width: 239px;
-    max-width: 239px;
+    min-width: none;
+    left: 0;
   }
 }

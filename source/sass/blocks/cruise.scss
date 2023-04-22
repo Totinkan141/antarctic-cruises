@@ -46,18 +46,14 @@
 
     .cruise__order-link {
       display: block;
+      min-width: none;
+      left: 0;
 
 
       @include vp-767 {
-        left: 0;
         min-width: 220px;
         max-width: 220px;
       }
-    }
-
-    > * {
-      min-width: 239px;
-      max-width: 239px;
     }
   }
 
