@@ -83,6 +83,7 @@
   min-width: 324px;
   width: 100%;
   max-width: 560px;
+  background-color: $light-blue;
 
   @include vp-1023 {
     width: max-content;

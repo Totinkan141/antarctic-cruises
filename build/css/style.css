@@ -1561,6 +1561,7 @@ button,
   min-width: 324px;
   width: 100%;
   max-width: 560px;
+  background-color: #e3ecf6;
 }
 
 .intro__image img {
