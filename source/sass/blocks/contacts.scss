@@ -71,10 +71,16 @@
   margin-bottom: 20px;
 
 
-  svg {
+  &::before {
     position: absolute;
+    content: "";
     top: 2px;
     left: 1px;
+    width: 18px;
+    height: 22px;
+    background-image: url("../img/svg/marker.svg");
+    background-size: 18px 22px;
+    background-repeat: no-repeat;
   }
 }
 
@@ -83,5 +89,10 @@
     position: relative;
     top: 2px;
     margin-right: 6px;
+  }
+
+  @include hover-focus {
+    opacity: 0.75;
+    transition: opasity $trans-default;
   }
 }

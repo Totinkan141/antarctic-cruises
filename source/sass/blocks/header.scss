@@ -66,6 +66,12 @@
     font-size: 14px;
     line-height: 17px;
   }
+
+  @include hover-focus {
+    opacity: 0.7;
+
+    transition: opacity $trans-default;
+  }
 }
 
 .header__burger {
@@ -101,6 +107,8 @@
     right: -4px;
     display: inline-block;
     color: $color-default-white;
+    background-image: url("../img/svg/burger-menu.svg");
+    background-repeat: no-repeat;
   }
 
   &--close {

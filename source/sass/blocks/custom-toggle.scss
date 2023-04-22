@@ -40,9 +40,15 @@
     padding: 0;
     width: 100%;
 
+    @include hover-focus {
+      opacity: 0.75;
+      transition: opacity $trans-default;
+    }
+
     .custom-toggle__label {
       position: relative;
       top: 5px;
+      width: 100%;
 
       @include vp-767 {
         top: 0;

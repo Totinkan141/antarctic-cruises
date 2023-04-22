@@ -16,6 +16,7 @@
   @include hover-focus {
     flex-direction: column;
     padding: 29px 25px 35px;
+    transition: all $trans-default;
 
     .cruise__image {
       display: none;
@@ -106,7 +107,7 @@
   overflow-y: scroll;
   max-width: 309px;
   width: 100%;
-  min-width: 290px;
+  min-width: 230px;
   position: relative;
 
   scrollbar-width: none;
