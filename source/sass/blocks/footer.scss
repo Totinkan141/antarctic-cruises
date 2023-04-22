@@ -67,6 +67,11 @@
 
 .footer-nav__link {
   color: $color-default-white;
+
+  @include hover-focus {
+    opacity: 0.75;
+    transition: opacity $trans-default;
+  }
 }
 
 .footer__socials {

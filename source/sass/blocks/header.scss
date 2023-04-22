@@ -23,17 +23,17 @@
 
 .header__logo {
   color: $color-default-white;
+}
 
-  &--burger {
-    display: none;
-    position: absolute;
-    content: "";
-    width: 42px;
-    height: 22px;
-    top: 20px;
-    left: 50px;
-    z-index: 1;
-  }
+.header__logo-burger {
+  display: none;
+  position: absolute;
+  content: "";
+  width: 42px;
+  height: 22px;
+  top: 20px;
+  left: 50px;
+  z-index: 1;
 }
 
 .header-nav__list {
@@ -65,6 +65,12 @@
   @include vp-1023 {
     font-size: 14px;
     line-height: 17px;
+  }
+
+  @include hover-focus {
+    opacity: 0.7;
+
+    transition: opacity $trans-default;
   }
 }
 
@@ -101,6 +107,8 @@
     right: -4px;
     display: inline-block;
     color: $color-default-white;
+    background-image: url("../img/svg/burger-menu.svg");
+    background-repeat: no-repeat;
   }
 
   &--close {
@@ -115,11 +123,11 @@
 
   .header__logo {
     opacity: 0;
+  }
 
-    &--burger {
-      display: block;
-      z-index: 20;
-    }
+  .header__logo-burger {
+    display: block;
+    z-index: 20;
   }
 
 

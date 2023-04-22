@@ -1,5 +1,12 @@
 .custom-input,
 .custom-textarea {
+  @include hover-focus {
+    input {
+      box-shadow: 4px 4px 8px 0 rgba(255, 255, 255, 0.2), -4px -4px 8px 0 rgba(255, 255, 255, 0.2);
+      transition: box-shadow $trans-default;
+    }
+  }
+
   label {
     display: flex;
     align-items: center;
@@ -7,7 +14,7 @@
 
 
     &:hover {
-      outline: 2px solid rgba($dark-blue, 0.5);
+      border: 2px solid rgba($dark-blue, 0.5);
     }
 
     &:focus {
