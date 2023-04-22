@@ -4,6 +4,10 @@
   @include vp-1023 {
     padding: 89px 0 100px;
   }
+
+  @include vp-767 {
+    padding: 56px 0 65px;
+  }
 }
 
 .upcoming-cruises__title {
@@ -13,6 +17,18 @@
   font-weight: 600;
   font-size: 28px;
   line-height: 42px;
+
+  @include vp-1023 {
+    margin: 0 0 50px;
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 27px;
+    font-size: 24px;
+    line-height: 42px;
+  }
 }
 
 .upcoming-cruises__list {
@@ -29,6 +45,20 @@
   @include vp-1023 {
     justify-content: space-between;
     column-gap: 0;
+  }
+
+  @include vp-767 {
+    padding: 0;
+    width: min-content;
+    align-items: center;
+  }
+}
+
+.upcoming-cruises__item {
+  padding: 22px 30px;
+
+  @include vp-1023 {
+    padding: 27px 35px;
   }
 }
 
