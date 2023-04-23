@@ -1560,6 +1560,9 @@ button,
   grid-column: 2/3;
   min-width: 324px;
   width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   max-width: 560px;
   background-color: #e3ecf6;
 }
@@ -2193,6 +2196,7 @@ button,
     max-width: 324px;
     min-width: 324px;
     max-height: 175px;
+    height: 100%;
   }
 
   .advantages {
