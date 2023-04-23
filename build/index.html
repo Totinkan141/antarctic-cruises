@@ -107,7 +107,7 @@
               srcset="img/intro/desktop/intro@1x.webp 1x, img/intro/desktop/intro@2x.webp 2x">
             <img src="img/intro/desktop/intro@1x.jpg"
               srcset="img/intro/desktop/intro@1x.jpg 1x, img/intro/desktop/intro@2x.jpg 2x "
-              alt="Три пингвина на фоне снега в Антарктики." width="560" height="301">
+              alt="Три пингвина на фоне снега в Антарктики." width="560" height="301" loading="eager">
           </picture>
         </div>
       </section>
@@ -545,7 +545,7 @@
       <section class="contacts" id="contacts">
         <h2 class="visually-hidden">Контактная информация</h2>
         <div class="container contacts__inner">
-          <div class="map" id="map" loading="lazy">
+          <div class="map" id="map">
           </div>
           <div class="contacts__content">
             <p class="contacts__text">У&nbsp;вас ещё остались вопросы или сомнения?
@@ -615,7 +615,7 @@
   </div>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU" defer></script>
+  <script src="https://api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU"" async></script>
 </body>
 
 </html>

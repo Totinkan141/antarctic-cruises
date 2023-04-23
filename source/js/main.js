@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
   burger.init();
   // Modules
   // ---------------------------------
-
+  ymaps.ready(Map);
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
     window.form = form;
     form.init();
 
-    ymaps.ready(Map);
+
   });
 });
 
