@@ -1744,7 +1744,7 @@ button,
   padding: 0;
   list-style-type: none;
   gap: 10px;
-  margin: 0 0 25px;
+  margin: 0 0 5px;
   overflow-y: scroll;
   max-width: 309px;
   width: 100%;
