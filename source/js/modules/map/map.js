@@ -11,9 +11,6 @@ function init() {
     iconImageSize: [18, 22],
     iconImageOffset: [-9, -10],
   });
-
-  map.controls.remove('rulerControl');
-
   map.geoObjects.add(placemark);
 }
 

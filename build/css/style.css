@@ -1560,7 +1560,11 @@ button,
   grid-column: 2/3;
   min-width: 324px;
   width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   max-width: 560px;
+  background-color: #e3ecf6;
 }
 
 .intro__image img {
@@ -1740,7 +1744,7 @@ button,
   padding: 0;
   list-style-type: none;
   gap: 10px;
-  margin: 0 0 30px;
+  margin: 0 0 5px;
   overflow-y: scroll;
   max-width: 309px;
   width: 100%;
@@ -2192,6 +2196,7 @@ button,
     max-width: 324px;
     min-width: 324px;
     max-height: 175px;
+    height: 100%;
   }
 
   .advantages {
