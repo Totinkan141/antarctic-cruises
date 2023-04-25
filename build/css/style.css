@@ -1312,6 +1312,9 @@ button,
 
 .header__logo {
   color: #f9fbfd;
+  margin-right: 20px;
+  min-width: 70px;
+  min-height: 38px;
 }
 
 .header__logo-burger {
@@ -1784,6 +1787,7 @@ button,
   padding: 50px 0;
   background-image: -webkit-image-set(url("../img/booking/desktop/booking@2x.webp") 2x, url("../img/booking/desktop/booking@1x.webp") 1x, url("../img/booking/desktop/booking@2x.jpg") 2x, url("../img/booking/desktop/booking@1x.jpg") 1x);
   background-image: image-set(url("../img/booking/desktop/booking@2x.webp") 2x, url("../img/booking/desktop/booking@1x.webp") 1x, url("../img/booking/desktop/booking@2x.jpg") 2x, url("../img/booking/desktop/booking@1x.jpg") 1x);
+  background-color: #e3ecf6;
   background-size: cover;
   background-position: center center;
 }
@@ -1945,7 +1949,7 @@ button,
   background-image: -webkit-image-set(url("../img/map/map@2x.webp") 2x, url("../img/map/map@1x.webp") 1x, url("../img/map/map@2x.jpg") 2x, url("../img/map/map@1x.jpg") 1x);
   background-image: image-set(url("../img/map/map@2x.webp") 2x, url("../img/map/map@1x.webp") 1x, url("../img/map/map@2x.jpg") 2x, url("../img/map/map@1x.jpg") 1x);
   background-size: cover;
-  background-color: #011c40;
+  background-color: #e3ecf6;
 }
 
 .socials {
@@ -2011,6 +2015,8 @@ button,
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  min-width: 70px;
+  min-height: 38px;
 }
 
 .footer-nav__list {
@@ -2107,6 +2113,11 @@ button,
 
   .header {
     padding-top: 30px;
+  }
+
+  .header__logo {
+    min-width: 38px;
+    min-height: 20px;
   }
 
   .header-nav__list {
@@ -2344,6 +2355,11 @@ button,
     gap: 25px;
   }
 
+  .footer__logo {
+    min-width: 38px;
+    min-height: 20px;
+  }
+
   .footer-nav__list {
     margin: 3px 0 0;
     gap: 23px;
@@ -2393,6 +2409,11 @@ button,
 
   .header {
     padding-top: 20px;
+  }
+
+  .header__logo {
+    min-width: 42px;
+    height: 22px;
   }
 
   .header-nav__list {
@@ -2625,6 +2646,11 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 28px;
+  }
+
+  .footer__logo {
+    min-width: 42px;
+    height: 22px;
   }
 
   .footer-nav__list {

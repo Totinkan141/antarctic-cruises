@@ -9,7 +9,7 @@
     url("../img/map/map@1x.jpg") 1x,
   );
   background-size: cover;
-  background-color: $dark-blue;
+  background-color: $light-blue;
 
   @include vp-1279 {
     min-width: 450px;
