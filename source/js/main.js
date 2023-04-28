@@ -11,8 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
 
-  const burger = new Burger();
-  burger.init();
+
   // Modules
   // ---------------------------------
 
@@ -23,7 +22,8 @@ window.addEventListener('DOMContentLoaded', () => {
     window.form = form;
     form.init();
     ymaps.ready(Map);
-
+    const burger = new Burger();
+    burger.init();
   });
 });
 
