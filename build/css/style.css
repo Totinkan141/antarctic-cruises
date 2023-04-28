@@ -1776,6 +1776,8 @@ button,
 .cruise__image img {
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .cruise__name {
@@ -1796,7 +1798,6 @@ button,
   gap: 10px;
   margin: 0 0 5px;
   overflow-y: scroll;
-  max-width: 309px;
   width: 100%;
   min-width: 230px;
   position: relative;
@@ -2311,12 +2312,10 @@ button,
   }
 
   .upcoming-cruises__list {
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-column-gap: 0;
-    -moz-column-gap: 0;
-    column-gap: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(309px, 1fr))[2];
+    grid-template-columns: repeat(2, minmax(309px, 1fr));
   }
 
   .upcoming-cruises__item {
@@ -2336,7 +2335,7 @@ button,
   }
 
   .cruise {
-    max-width: 309px;
+    max-width: 100%;
     min-width: 309px;
   }
 
@@ -2598,13 +2597,8 @@ button,
   }
 
   .upcoming-cruises__list {
-    padding: 0;
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -ms-grid-columns: (minmax(290px, 1fr))[1];
+    grid-template-columns: repeat(1, minmax(290px, 1fr));
   }
 
   .cruise:focus-within .cruise__name {
@@ -2618,7 +2612,6 @@ button,
 
   .cruise:focus-within .cruise__order-link {
     min-width: 220px;
-    max-width: 220px;
   }
 
   .cruise.focus-visible:focus .cruise__name {
@@ -2632,11 +2625,9 @@ button,
 
   .cruise.focus-visible:focus .cruise__order-link {
     min-width: 220px;
-    max-width: 220px;
   }
 
   .cruise {
-    max-width: 270px;
     min-width: 270px;
   }
 
@@ -2790,7 +2781,6 @@ button,
 
   .cruise:hover:not(.focus-visible) .cruise__order-link {
     min-width: 220px;
-    max-width: 220px;
   }
 }
 
