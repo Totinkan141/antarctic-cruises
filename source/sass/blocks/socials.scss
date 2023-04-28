@@ -19,7 +19,8 @@
 
 .socials__link {
   color: $color-default-white;
-  height: 20px;
+  min-height: 20px;
+  min-width: 20px;
   display: flex;
   justify-content: center;
   align-items: center;

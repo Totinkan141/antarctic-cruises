@@ -1988,7 +1988,8 @@ button,
 
 .socials__link {
   color: #f9fbfd;
-  height: 20px;
+  min-height: 20px;
+  min-width: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
