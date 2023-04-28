@@ -12,6 +12,51 @@
   background-color: $dark-blue;
   overflow: hidden;
 
+  &:focus-within {
+    flex-direction: column;
+    padding: 29px 25px 35px;
+    transition: all $trans-default;
+
+    .cruise__image {
+      display: none;
+    }
+
+    .cruise__name {
+      margin: 0 0 13px;
+
+      @include vp-1023 {
+        position: relative;
+        left: 10px;
+        margin: 0 0 20px;
+      }
+
+      @include vp-767 {
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+    .cruise__details {
+      display: flex;
+
+      @include vp-767 {
+        left: 0;
+      }
+    }
+
+    .cruise__order-link {
+      // display: block;
+      opacity: 1;
+      min-width: none;
+      left: 0;
+
+
+      @include vp-767 {
+        min-width: 220px;
+        max-width: 220px;
+      }
+    }
+  }
 
   @include hover-focus {
     flex-direction: column;
@@ -46,7 +91,8 @@
     }
 
     .cruise__order-link {
-      display: block;
+      // display: block;
+      opacity: 1;
       min-width: none;
       left: 0;
 
@@ -141,7 +187,8 @@
 
 .cruise__order-link {
   margin-top: auto;
-  display: none;
+  // display: none;
+  opacity: 0;
   position: relative;
   left: 9px;
 }
