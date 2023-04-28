@@ -1486,8 +1486,9 @@ button,
 .main-screen__hero {
   max-width: 100%;
   position: absolute;
-  margin-left: -198px;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: -1;
   height: 655px;
   overflow: hidden;
@@ -1496,6 +1497,7 @@ button,
 
 .main-screen__hero img {
   min-width: 1366px;
+  width: 100vw;
   -o-object-fit: cover;
   object-fit: cover;
   height: 655px;
@@ -2197,7 +2199,6 @@ button,
 
   .main-screen__hero {
     height: 638px;
-    margin-left: -45px;
   }
 
   .main-screen__hero img {
@@ -2493,7 +2494,6 @@ button,
 
   .main-screen__hero {
     height: 500px;
-    margin-left: -15px;
   }
 
   .main-screen__hero img {
