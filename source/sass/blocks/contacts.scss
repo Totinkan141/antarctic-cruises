@@ -32,6 +32,8 @@
   max-width: 500px;
   height: auto;
   padding-top: 75px;
+  display: flex;
+  flex-direction: column;
 
   @include vp-1023 {
     width: 100%;
@@ -85,6 +87,8 @@
 }
 
 .contacts__phone {
+  margin-bottom: 20px;
+
   svg {
     position: relative;
     top: 2px;
