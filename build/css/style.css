@@ -431,7 +431,6 @@ body {
   min-width: 320px;
   scroll-behavior: smooth;
   font-family: "Montserrat", "Arial", sans-serif;
-  overflow-x: hidden;
 }
 
 html {
@@ -575,6 +574,7 @@ button,
   min-height: 100vh;
   /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
+  overflow-x: hidden;
 }
 
 .wrapper .header,
