@@ -120,11 +120,11 @@
   bottom: 0;
   z-index: -1;
   background: $dark-blue-to-down;
+  object-fit: cover;
 
   img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
   }
 }
 
