@@ -1440,6 +1440,15 @@ button,
   position: absolute;
   top: 87px;
   left: 51px;
+  width: 100%;
+  max-width: calc(100vw - 51px);
+  max-height: calc(100vh - 87px);
+  overflow-y: scroll;
+}
+
+.header.is-open .header-nav::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .header.is-open .header-nav__list {
@@ -1771,13 +1780,13 @@ button,
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011c40));
   background: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011c40 100%);
   background: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .cruise__image img {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
 }
 
 .cruise__name {
@@ -1987,6 +1996,9 @@ button,
 
 .contacts__phone {
   margin-bottom: 20px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .contacts__phone svg {
